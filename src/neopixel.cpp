@@ -52,7 +52,7 @@
 
 #include "neopixel.h"
 
-#if PLATFORM_ID == 0 // Core (0)
+#if (PLATFORM_ID == 0) || (PLATFORM_ID == 31) // Core (0)
   #define pinLO(_pin) (PIN_MAP[_pin].gpio_peripheral->BRR = PIN_MAP[_pin].gpio_pin)
   #define pinHI(_pin) (PIN_MAP[_pin].gpio_peripheral->BSRR = PIN_MAP[_pin].gpio_pin)
 #elif (PLATFORM_ID == 6) || (PLATFORM_ID == 8) || (PLATFORM_ID == 10) || (PLATFORM_ID == 88) // Photon (6), P1 (8), Electron (10) or Redbear Duo (88)
