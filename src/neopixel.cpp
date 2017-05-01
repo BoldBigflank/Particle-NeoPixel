@@ -50,7 +50,7 @@
   <http://www.gnu.org/licenses/>.
   -------------------------------------------------------------------------*/
 
-#include "neopixel.h"
+#include "neopixel-pi.h"
 
 #if (PLATFORM_ID == 0) || (PLATFORM_ID == 31) // Core (0)
   #define pinLO(_pin) (PIN_MAP[_pin].gpio_peripheral->BRR = PIN_MAP[_pin].gpio_pin)
